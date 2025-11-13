@@ -22,7 +22,7 @@ if (process.env.DATABASE_URL) {
     user: process.env.DB_USER,
     pass: process.env.DB_PASSWORD,
     host: process.env.DB_HOST || 'localhost',
-    port: process.env.DB_PORT || 5432,
+    port: Number(process.env.DB_PORT) || 5432,
   };
 }
 
